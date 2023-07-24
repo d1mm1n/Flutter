@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "761161582157",
+    "project_id": "chat-bot-7a647",
+    "storage_bucket": "chat-bot-7a647.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761161582157:android:b180937cfedb20df983e04",
+        "android_client_info": {
+          "package_name": "com.example.splash"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "761161582157-9c904s53g74ev65qm5rpfu4nau38ho63.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNB1rjGPX21SBW6QBHVDXfVf9uIITv6v0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "761161582157-9c904s53g74ev65qm5rpfu4nau38ho63.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
