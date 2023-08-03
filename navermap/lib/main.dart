@@ -8,7 +8,7 @@ void main() async {
   runApp(const NaverMapApp());
 }
 
-//네이버 인증 부분
+// 네이버 인증 부분
 Future<void> _initialize() async {
   WidgetsFlutterBinding.ensureInitialized();
   await NaverMapSdk.instance.initialize(
@@ -22,9 +22,10 @@ class NaverMapApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => MaterialApp(
-      home: testId == null
-          ? const TestPage()
-          : TestPage(key: Key("testPage_$testId")));
+        home: testId == null
+            ? const TestPage()
+            : TestPage(key: Key("testPage_$testId")),
+      );
 }
 
 class TestPage extends StatefulWidget {
@@ -96,5 +97,19 @@ class TestPageState extends State<TestPage> {
               NInfoWindow.onMarker(id: e_marker.info.id, text: "도착");
           e_marker.openInfoWindow(show_emarker);
         },
+        // 지도를 클릭했을 때의 콜백 함수
+        onMapTapped: (point, coord) {
+          // 클릭한 위치의 경도, 위도 정보를 가져옴
+          double latitude = coord.latitude;
+          double longitude = coord.longitude;
+
+          // 마커 추가
+          _addMarker(NLatLng(latitude, longitude));
+        },
       );
+
+  void _addMarker(NLatLng latLng) {
+    final new_marker = NMarker(id: 'new', position: latLng);
+    _mapController.addOverlay(new_marker);
+  }
 }
