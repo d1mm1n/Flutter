@@ -69,4 +69,8 @@ flutter {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //NAVER지도 SDK는 구글 플레이 서비스, 지자기 및 가속도 센서를 사용 FusedLocationSource 하여???? 뭔소리임 이게 여튼 최적의 위치를 반환하는 구현체를 제공
+    //를 사용하려면 앱 모듈에 대한 종속성을 추가 (아래 추가해줌)
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+
 }

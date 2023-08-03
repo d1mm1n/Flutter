@@ -1,5 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.navermap">
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!--위치 추적 기능을 사용하는 앱이기 때문에 ACCESS_FINE_LOCATION 에서 권한 지정을 해줌-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
         android:label="navermap"
         android:name="${applicationName}"
